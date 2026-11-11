@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#090b1d" />
+  <title>Neon Dash — Rhythm Runner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Neon Dash inicio"><span class="brand-mark">N</span><span>NEON<span class="brand-light">DASH</span></span></a>
+      <div class="top-meta"><span class="live-dot"></span><span>RHYTHM RUNNER</span><span class="meta-divider">/</span><span>LEVEL 01</span></div>
+      <button class="sound-button" id="soundBtn" aria-label="Activar o desactivar sonido"><span class="sound-icon">♪</span><span class="sound-label">SONIDO</span></button>
+    </header>
+
+    <section class="game-wrap" aria-label="Juego Neon Dash">
+      <div class="game-heading">
+        <div><p class="eyebrow">UN SOLO TOQUE. TODO EL RITMO.</p><h1>Pulse <span>Runner</span></h1></div>
+        <div class="best-chip"><span class="best-star">✦</span><div><small>MEJOR</small><strong id="bestLabel">0%</strong></div></div>
+      </div>
+
+      <div class="game-frame" id="gameFrame">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="Juego de plataformas rítmico en 2D"></canvas>
+        <div class="hud">
+          <div class="level-name"><span class="level-gem">◆</span><span>STEREO MADNESS</span></div>
+          <div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span id="progressText">0%</span></div>
+          <button class="pause-button" id="pauseBtn" aria-label="Pausar" title="Pausar (P)"><span></span><span></span></button>
+        </div>
+        <div class="overlay" id="overlay">
+          <div class="overlay-card" id="overlayCard">
+            <div class="card-kicker"><span class="kicker-line"></span><span id="cardKicker">NIVEL 01 · PRINCIPIANTE</span><span class="kicker-line"></span></div>
+            <div class="hero-icon" id="heroIcon"><div class="hero-cube"><i></i></div><span class="icon-spark spark-a">✦</span><span class="icon-spark spark-b">✦</span></div>
+            <h2 id="cardTitle">¿Listo para<br><em>el ritmo?</em></h2>
+            <p id="cardBody">Salta al compás, esquiva los pinchos<br class="desktop-break"> y llega hasta el final.</p>
+            <button class="play-button" id="playBtn"><span id="playLabel">JUGAR</span><span class="play-arrow">→</span></button>
+            <div class="card-hint" id="cardHint"><span class="keycap">SPACE</span><span class="or-label">o</span><span class="tap-icon">⌁</span><span>TOCA PARA SALTAR</span></div>
+          </div>
+        </div>
+        <div class="mobile-jump" id="mobileJump" aria-hidden="true"><span>TOCA PARA SALTAR</span><span class="tap-circle">↑</span></div>
+        <div class="flash" id="flash"></div>
+      </div>
+      <div class="game-footer">
+        <div class="control-tip"><span class="tip-icon">↗</span><span>PULSA <kbd>ESPACIO</kbd> O HAZ CLIC PARA SALTAR</span></div>
+        <div class="run-stats"><span><i class="stat-dot"></i><span id="attemptLabel">INTENTO 01</span></span><span class="stat-sep">·</span><span><span id="deathLabel">0</span> FALLOS</span></div>
+      </div>
+    </section>
+    <footer class="page-footer"><span>HECHO PARA MANTENER EL RITMO</span><span class="footer-mark">◆ <b>NEON DASH</b></span><span>← → TAMBIÉN FUNCIONAN</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
